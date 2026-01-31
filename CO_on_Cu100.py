@@ -13,5 +13,5 @@ add_adsorbate(slab, adsorbate, 2.0, "bridge")
 slab.calc = calc
 
 # Set up LBFGS dynamics object
-opt = LBFGS(slab)
-opt.run(0.05, 100)
+opt = LBFGS(slab, trajectory="trajectories/CO_on_Cu100-LBFGS-1.traj")
+opt.run(fmax=0.05)
